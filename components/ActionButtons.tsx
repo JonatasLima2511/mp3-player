@@ -36,7 +36,9 @@ export default function ActionButtons() {
             <TouchableOpacity style = {styles.playPauseButton} onPress={playPauseTrack}>
                 <Image
                     style={styles.icons}
-                    source={require('../assets/player_icons/play.png')}
+                    source={
+                        isPlaying? require('../assets/player_icons/pause.png') : require('../assets/player_icons/play.png')
+                    }
                 />
             </TouchableOpacity>
 
@@ -110,10 +112,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#134B9E'
     },
 
-    icons: {                      
+    icons: {                  
+          
         alignContent: 'center',
         alignSelf: 'center',
         color: '#ffffff',
-        marginLeft: 5,
+        
     }
 })

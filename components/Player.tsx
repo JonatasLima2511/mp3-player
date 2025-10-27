@@ -1,4 +1,5 @@
 import ActionButtons from './ActionButtons';
+import TrackInfos from './TrackInfos';
 
 import { LinearGradient } from 'expo-linear-gradient';
 import { StyleSheet, View } from 'react-native';
@@ -15,6 +16,8 @@ export default function Player() {
 
             <View style = {styles.playerOptions}/>
 
+            <TrackInfos/>
+
             <ActionButtons/>
                     
         </View>
@@ -25,10 +28,6 @@ const styles = StyleSheet.create({
     
     background: {
         height: 960,
-    },
-
-    trackImage: {
-        borderColor: 'black'
     },
 
     playerOptions: {
